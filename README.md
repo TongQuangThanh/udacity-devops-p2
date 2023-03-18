@@ -1,6 +1,5 @@
 # Overview
-
-<TODO: complete this with an overview of your project>
+This project provide to end-user a website so they can know price of house in Boston base on some criteria
 
 ## Project Plan
 <TODO: Project Plan
