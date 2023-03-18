@@ -6,7 +6,8 @@ trigger:
 - main
 
 # Replace the agent pool name
-pool: thanhAgentPool
+pool:
+  name: thanhAgentPool
 
 variables:
   # Replace the service connection name as used in the DevOps project settings
