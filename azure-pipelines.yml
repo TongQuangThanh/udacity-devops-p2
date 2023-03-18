@@ -5,15 +5,15 @@
 trigger:
 - main
 
-# TODO: Replace the agent pool name
-pool: myAgentPool
+# Replace the agent pool name
+pool: thanhAgentPool
 
 variables:
-  # TODO: Replace the service connection name as used in the DevOps project settings
+  # Replace the service connection name as used in the DevOps project settings
   azureServiceConnectionId: 'mySC'
   
-  # TODO: Specify the value of the existing Web App name
-  webAppName: 'udacity-devops-p2'
+  # Specify the value of the existing Web App name
+  webAppName: 'udacity-ml-house-service'
 
   # Environment name
   environmentName: 'flask-ml-service'
