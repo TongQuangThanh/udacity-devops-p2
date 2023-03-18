@@ -29,9 +29,9 @@ stages:
     pool: thanhAgentPool
     steps:    
     - script: |
-        python -m pip install --upgrade pip
-        python -m pip install setup
-        python -m pip install -r requirements.txt
+        python3.8 -m pip install --upgrade pip
+        python3.8 -m pip install setup
+        python3.8 -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
       displayName: 'Step 1'
 
