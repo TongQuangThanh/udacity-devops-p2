@@ -14,7 +14,7 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
   
   # Specify the value of the existing Web App name
-  webAppName: 'devops-vm'
+  webAppName: 'devops-app-name'
 
   # Environment name
   environmentName: 'devops-env'
