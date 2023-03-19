@@ -11,13 +11,13 @@ pool:
 
 variables:
   # Replace the service connection name as used in the DevOps project settings
-  azureServiceConnectionId: '68031bf1-4312-4971-afa6-1981959a3af4'
+  azureServiceConnectionId: 'myServiceConnection'
   
   # Specify the value of the existing Web App name
-  webAppName: 'devops-p2'
+  webAppName: 'azure-devops-project2'
 
   # Environment name
-  environmentName: 'devops-env'
+  environmentName: 'azure-devops-project2'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
