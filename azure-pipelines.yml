@@ -14,7 +14,7 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
   
   # Specify the value of the existing Web App name
-  webAppName: 'devops-p2'
+  webAppName: '/subscriptions/9a79ec76-bb8c-43b1-bcf7-04a65fd5f29e/resourceGroups/udacity-devops/providers/Microsoft.Web/sites/devops-p2'
 
   # Environment name
   environmentName: 'devops-env'
