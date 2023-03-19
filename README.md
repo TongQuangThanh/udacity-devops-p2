@@ -4,7 +4,8 @@ This project provide to end-user a website so they can know price of house in Bo
 ## Project Plan
 <TODO: Project Plan
 
-* A link to a Trello board for the project
+Trello board:
+https://l.messenger.com/l.php?u=https%3A%2F%2Ftrello.com%2Fb%2FoLMfbpkO%2Fudacity-devops-project-2&h=AT1n3MWFgeEpi_DXW86CcP8Zkg8TpK_vgf1tRJxP42vYMX9-lUr_3T0Sby4dcAMQI8Df6RMhfge9zVkA3wQ1DsjTNGwqMeWqQdLufHT98cqELcIGIPa1NgELxqxTX3anjJmy59CBuSY
 * A link to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
