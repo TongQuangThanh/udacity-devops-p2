@@ -17,7 +17,7 @@ variables:
   webAppName: 'azure-devops-project2'
 
   # Environment name
-  environmentName: 'azure-devops-project2'
+  environmentName: 'devops-env'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
