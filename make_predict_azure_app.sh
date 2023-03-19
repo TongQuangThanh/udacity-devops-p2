@@ -25,4 +25,4 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST https://udacity-ml-house-service.azurewebsites.net/
+     -X POST https://devops-app-name.azurewebsites.net/
