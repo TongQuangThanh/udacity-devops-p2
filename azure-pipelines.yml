@@ -14,7 +14,7 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
   
   # Specify the value of the existing Web App name
-  webAppName: 'devops-web-app-thanhtq4'
+  webAppName: 'azure-devops-thanh-app'
 
   # Environment name
   environmentName: 'thanh-env'
