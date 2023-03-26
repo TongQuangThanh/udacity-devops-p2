@@ -14,7 +14,7 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
   
   # Specify the value of the existing Web App name
-  webAppName: 'thanh-26-3'
+  webAppName: 'thanh-26-11'
 
   # Environment name
   environmentName: 'thanh-env'
