@@ -25,4 +25,4 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST https://azure-devops-thanh-app.azurewebsites.net:$PORT/predict
+     -X POST https://thanh-26-3.azurewebsites.net:$PORT/predict
