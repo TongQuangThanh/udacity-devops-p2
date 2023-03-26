@@ -21,9 +21,6 @@ variables:
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
-
-  # Python version: 3.7
-  pythonVersion: '3.7'
   
 stages:
     - stage: Build
@@ -33,21 +30,14 @@ stages:
         pool: myAgentPool
         steps:    
         - script: |
-            python3.7 -m pip install --upgrade pip
-            python3.7 -m pip install setup
-            python3.7 -m pip install -r requirements.txt
+            python3.8 -m pip install --upgrade pip
+            python3.8 -m pip install setup
+            python3.8 -m pip install -r requirements.txt
           workingDirectory: $(projectRoot)
           displayName: 'Step 1 install'
         
         - script: |
             export PATH=$HOME/.local/bin:$PATH
-            make install
-          workingDirectory: $(projectRoot)
-          displayName: 'Step 2'
-        
-        - script: |
-            export PATH=$HOME/.local/bin:$PATH
-            make install
             make lint
           workingDirectory: $(projectRoot)
           displayName:  'Step 3 - Run lint tests'
