@@ -14,7 +14,7 @@ variables:
   azureServiceConnectionId: 'myServiceConnection'
   
   # Specify the value of the existing Web App name
-  webAppName: 'devops-p2'
+  webAppName: 'devops-web-app-thanhtq4'
 
   # Environment name
   environmentName: 'devops-env'
@@ -69,7 +69,7 @@ stages:
   jobs:
   - deployment: DeploymentJob
     pool: myAgentPool
-    environment: $(environmentName)
+    # environment: $(environmentName)
     strategy:
       runOnce:
         deploy:
