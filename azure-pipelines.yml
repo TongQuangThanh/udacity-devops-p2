@@ -24,34 +24,34 @@ variables:
 
   # Python version: 3.7
   pythonVersion: '3.7'
-
+  
 stages:
     - stage: Build
       displayName: Build stage
       jobs:
       - job: Build
         pool: myAgentPool
-        steps:
-        - task: UsePythonVersion@0
-          inputs:
-            versionSpec: '$(pythonVersion)'
-          displayName: 'Step 1 - Use Python $(pythonVersion)'
-        
+        steps:    
         - script: |
             python3.7 -m pip install --upgrade pip
             python3.7 -m pip install setup
             python3.7 -m pip install -r requirements.txt
           workingDirectory: $(projectRoot)
-          displayName: 'Step 2 - Install'
+          displayName: 'Step 1 install'
         
         - script: |
-            python -m venv antenv
-            source antenv/bin/activate
+            export PATH=$HOME/.local/bin:$PATH
+            make install
+          workingDirectory: $(projectRoot)
+          displayName: 'Step 2'
+        
+        - script: |
+            export PATH=$HOME/.local/bin:$PATH
             make install
             make lint
           workingDirectory: $(projectRoot)
           displayName:  'Step 3 - Run lint tests'
-          
+
         - task: ArchiveFiles@2
           displayName: 'Step 4 - Archive files'
           inputs:
@@ -60,11 +60,11 @@ stages:
             archiveType: zip
             archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
             replaceExistingArchive: true
-    
+
         - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
           displayName: 'Step 5 - Upload package'
           artifact: drop
-    
+
     - stage: Deploy
       displayName: 'Deploy Web App'
       dependsOn: Build
