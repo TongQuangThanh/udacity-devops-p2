@@ -38,7 +38,7 @@ Project cloned to Azure cloud shell
 
 Move to folder cloned
 ```sh
-cd udacity-devops-p2
+cd devops-p2
 ```
 
  Create a virtual environment for your application.
@@ -73,7 +73,7 @@ Result on github action
 * Create the webapp deploying the code from the local workspace to Azure app Service (using Plan B1) with this command:
 
 ```sh
-az webapp up -n <name of webapp> --location eastus --sku B1
+az webapp up -n <name of webapp> --location westus --sku B1
 ```
 ![Alt text](screenshot/app-service.png)
 
@@ -94,22 +94,29 @@ az webapp up -n <name of webapp> --location eastus --sku B1
 
 * Choose Run Pipeline and your Azure DevOps Pipeline is going to start to be deployed with all his stages (in this case 2: Build & deploy)
 
-![alt text](https://github.com/jfcb853/Udacity-DevOps-Azure-Project-2/blob/main/images/screen%206%20-%20azure%20devops%20pipeline%20executing.png)
-
 * Check that the webapp is running opening his URL, example:
 
 ```sh
 https://<app-name>.azurewebsites.net/
 ```
+![Alt text](screenshot/web-app.jpeg)
 
-![alt text](https://github.com/jfcb853/Udacity-DevOps-Azure-Project-2/blob/main/images/screen%208%20-%20webapp%20running.png)
+Remaining screenshots can be checked in the screenshot folder.
 
-* Update the file `make_predict_azure_app.sh` with the webapp service end point
+* Running Azure App Service from Azure Pipelines automatic deployment
 
+![Alt text](screenshot/pipeline-list.png)
+![Alt text](screenshot/pipeline-detail.png)
+![Alt text](screenshot/pipeline-state.png)
+
+* Running load test by locust
 ```sh
-grep https make_predict_azure_app.sh
+loadtest.sh
 ```
 
+![Alt text](screenshot/locust.png)
+
+* Update the file `make_predict_azure_app.sh` with the webapp service end point
 * When the Azure DevOps pipeline is successfully deployed, then its time to make a prediction on our webapp (running in Azure App Service):
 
 ```sh
@@ -120,40 +127,16 @@ Answer:
 
 ```sh
 Port: 443
-{"prediction":[20.35373177134412]}
+{"prediction":[2.431574790057212]}
 ```
 
-Remaining screenshots can be checked in the screenshot folder.
-
-
-
-
-
-
-
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
-
-* Output of streamed log files from deployed application
-
+![Alt text](screenshot/prediction.png)
 
 ## Enhancements
 Add more case on implementation.
 Provide ability for user to select prediction model.
 
 ## Demo 
-
-<TODO: Add link Screencast on YouTube>
+https://youtu.be/0m36MHcrBu8
 
 
